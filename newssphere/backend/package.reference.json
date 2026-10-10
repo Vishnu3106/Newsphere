@@ -1,0 +1,19 @@
+{
+  "_note": "REFERENCE ONLY - merge the scripts/dependencies into your real backend/package.json, do not overwrite it. Keep your existing name, version and lockfile.",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "build": "node scripts/build.mjs",
+    "test": "npm run build && node scripts/test.mjs",
+    "check": "npm run typecheck && npm test"
+  },
+  "dependencies": {
+    "@aws-sdk/client-dynamodb": "^3.0.0",
+    "@aws-sdk/lib-dynamodb": "^3.0.0"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.145",
+    "@types/node": "^24.0.0",
+    "esbuild": "^0.24.0",
+    "typescript": "^5.6.3"
+  }
+}
